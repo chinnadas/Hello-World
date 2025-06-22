@@ -13,6 +13,6 @@ public class IndexController {
 
 @GetMapping("/")
 public String helloWorld() {
-    return "Hello-world";
+    return "My New project with Docker compose is success";
   }
 }
