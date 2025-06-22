@@ -35,5 +35,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/hello-world:latest
-
+          tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest,${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.run_number }}
