@@ -36,3 +36,9 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest,${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.run_number }}
+      
+      - name: Pull latest Docker image
+        run: docker compose pull
+        
+      - name: Run Docker Compose
+        run: docker compose up -d
